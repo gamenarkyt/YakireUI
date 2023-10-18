@@ -1,3 +1,9 @@
+import { Typography } from "@/components/Typography/Typography";
+
 export const MainPage = () => {
-  return <div>mainpage</div>;
+  return (
+    <div>
+      <Typography />
+    </div>
+  );
 };
