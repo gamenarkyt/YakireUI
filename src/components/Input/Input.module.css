@@ -10,7 +10,6 @@
     outline: none;
     padding: 2px 5px;
     background-color: transparent;
-    // outline: none;
     border: none;
 
     &::placeholder {

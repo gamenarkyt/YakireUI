@@ -1,3 +1,4 @@
+/* theme */
 body {
   --accent: #206bc4;
   --accent2: #206ac449;
@@ -11,4 +12,17 @@ body {
   --border: 1px solid var(--accent);
   --border-inactive: 1px solid var(--inactive);
   --border2: 2px solid var(--accent);
+}
+
+/* constants */
+body {
+  --text-size-normal: 1rem;
+  --text-size-big: 1.25rem;
+  --text-size-header: 1.8rem;
+
+  --text-weight-normal: 400;
+  --text-weight-bold: 600;
+
+  --border-radius: 0.5rem;
+  --border-radius2: 0.25rem;
 }

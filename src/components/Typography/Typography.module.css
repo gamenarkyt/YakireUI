@@ -5,6 +5,7 @@
   font-size: var(--text-size-big);
 }
 .typography_header {
+  margin: 5px 0;
   color: var(--accent);
   font-size: var(--text-size-header);
 }
