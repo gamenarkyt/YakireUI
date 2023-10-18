@@ -4,9 +4,21 @@ import { Typography } from "@/components/Typography/Typography";
 
 import styles from "./MainPage.module.css";
 import { Divider } from "@/components/Divider/Divider";
-import { Input } from "@/components/Input/Input";
+import Input from "@/components/Input/Input";
+import { IconArrowNarrowRight } from "@tabler/icons-react";
+import { useState } from "react";
 
 export const MainPage = () => {
+  const [text, setText] = useState("");
+  const onSubmit = (finalString: string) => {
+    alert(finalString);
+  };
+
+  const onChange = (finalString: string) => {
+    setText(finalString);
+  };
+  console.log("mainpage rerender");
+
   return (
     <div>
       <Group variant="vertical">
@@ -28,7 +40,17 @@ export const MainPage = () => {
       <Divider />
       <Typography variant="header">Input components</Typography>
       <Group>
-        <Input leftComponents={<>left</>} rightComponents={<>right</>} />
+        <Input
+          placeholder="Search hentai..."
+          rightComponents={
+            <IconArrowNarrowRight
+            // onClick={() => alert("Searching hentai...")}
+            />
+          }
+          onSubmitCallback={onSubmit}
+          onChangeCallback={onChange}
+        />
+        {text}
       </Group>
 
       <Group variant="vertical"></Group>
