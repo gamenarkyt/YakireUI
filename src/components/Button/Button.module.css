@@ -16,7 +16,7 @@
   }
 
   &:focus-visible {
-    border: 1px solid red;
+    border: var(--border-focus);
   }
 }
 
