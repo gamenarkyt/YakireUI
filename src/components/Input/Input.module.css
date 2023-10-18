@@ -1,23 +1,24 @@
-.input {
+.yuiinput {
   display: flex;
+  justify-content: normal;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+
   color: var(--text);
-  border: var(--border-inactive);
+  border: var(--border2);
   border-radius: var(--border-radius2);
-  background-color: transparent;
-  transition: border 0.2s;
 
-  .root {
-    outline: none;
-    padding: 2px 5px;
-    background-color: transparent;
-    border: none;
-
-    &::placeholder {
-      color: var(--inactive);
-    }
+  &:focus-within {
+    border: var(--border-focus);
   }
 }
 
-.input:focus-within {
-  border: var(--border);
+.originalinput {
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &:focus-visible {
+    border: none;
+  }
 }
