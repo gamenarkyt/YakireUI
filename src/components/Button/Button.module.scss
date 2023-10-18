@@ -1,0 +1,42 @@
+.root {
+  width: fit-content;
+
+  color: var(--text);
+  font-weight: var(--text-weight-bold);
+  border: var(--border2);
+  border-radius: var(--border-radius);
+  padding: 2px 5px;
+  outline: none;
+  cursor: pointer;
+
+  transition: filter 0.2s;
+
+  &:active {
+    filter: brightness(115%);
+  }
+}
+
+.normal {
+  background-color: var(--accent);
+}
+
+.outline {
+  background-color: transparent;
+}
+
+.ghost {
+  background-color: transparent;
+  border: none;
+}
+
+@media (hover: hover) {
+  .root:hover {
+    filter: brightness(115%);
+  }
+}
+
+@media (hover: hover) {
+  .ghost:hover {
+    background-color: var(--accent2);
+  }
+}

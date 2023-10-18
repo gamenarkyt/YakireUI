@@ -1,0 +1,8 @@
+.divider {
+  width: calc(100% - 10px);
+  height: 2px;
+
+  margin: 5px;
+  background-color: var(--accent);
+  border-radius: var(--border-radius);
+}

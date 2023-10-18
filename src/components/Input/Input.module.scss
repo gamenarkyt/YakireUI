@@ -1,0 +1,24 @@
+.input {
+  display: flex;
+  color: var(--text);
+  border: var(--border-inactive);
+  border-radius: var(--border-radius2);
+  background-color: transparent;
+  transition: border 0.2s;
+
+  .root {
+    outline: none;
+    padding: 2px 5px;
+    background-color: transparent;
+    // outline: none;
+    border: none;
+
+    &::placeholder {
+      color: var(--inactive);
+    }
+  }
+}
+
+.input:focus-within {
+  border: var(--border);
+}

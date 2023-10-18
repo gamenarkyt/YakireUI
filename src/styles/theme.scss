@@ -1,0 +1,14 @@
+body {
+  --accent: #206bc4;
+  --accent2: #206ac449;
+  --inactive: #7c7c83;
+  --text: #e9e9ea;
+  --text2: #7c7c83;
+
+  --background: #232323;
+  --background-element: #343434;
+
+  --border: 1px solid var(--accent);
+  --border-inactive: 1px solid var(--inactive);
+  --border2: 2px solid var(--accent);
+}
