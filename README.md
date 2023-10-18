@@ -10,6 +10,7 @@
 
 ```bash
     yarn add clsx
+    yarn add @tabler/icons-react
 ```
 
 ## How to use:
