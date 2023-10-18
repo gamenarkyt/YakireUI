@@ -1,0 +1,9 @@
+.rootgroup {
+  display: flex;
+  gap: 5px;
+}
+.group_vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

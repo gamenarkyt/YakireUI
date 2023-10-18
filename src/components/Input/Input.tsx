@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import styles from "./Input.module.scss";
+import styles from "./Input.module.css";
 import clsx from "clsx";
 
 interface IProps {

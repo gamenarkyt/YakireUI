@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import styles from "./Typography.module.scss";
+import styles from "./Typography.module.css";
 
 import { FC, PropsWithChildren } from "react";
 
