@@ -12,6 +12,9 @@ body {
   --border: 1px solid var(--accent);
   --border-inactive: 1px solid var(--inactive);
   --border2: 2px solid var(--accent);
+
+  --focus: red;
+  --border-focus: 2px solid red;
 }
 
 /* constants */
