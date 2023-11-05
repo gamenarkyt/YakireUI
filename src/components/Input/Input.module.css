@@ -1,4 +1,5 @@
 .yuiinput {
+  width: fit-content;
   display: flex;
   justify-content: normal;
   align-items: center;

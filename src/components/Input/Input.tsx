@@ -1,24 +1,13 @@
-import {
-  FC,
-  FormEvent,
-  ReactNode,
-  memo,
-  useDeferredValue,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { FC,  ReactNode } from "react";
 import styles from "./Input.module.css";
 import clsx from "clsx";
-import { useDebounce } from "@/components/Input/useDebounce";
 
 interface IProps {
   className?: string;
   placeholder?: string;
   leftComponents?: ReactNode;
   rightComponents?: ReactNode;
-  onSubmitCallback?: (finalString: string) => void;
-  onChangeCallback?: (finalString: string) => void;
+  name: string
 }
 
 const Input: FC<IProps> = ({
@@ -26,41 +15,22 @@ const Input: FC<IProps> = ({
   placeholder = "Placeholder",
   leftComponents,
   rightComponents,
-  onSubmitCallback,
-  onChangeCallback,
+  name
 }) => {
-  const [inputValue, setInputValue] = useState("");
-  const debouncedInputValue = useDebounce(inputValue, 10 0);
-
-  const onInputChangeHandler = (newValue: string) => {
-    if (onChangeCallback) {
-      onChangeCallback(debouncedInputValue);
-    }
-    setInputValue(newValue);
-  };
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-    if (onSubmitCallback) {
-      onSubmitCallback(inputValue);
-    }
-  };
-  console.log("input rerender");
-
+ console.log('rererer')
   const _class = clsx(styles.yuiinput, styles.originalinput, className);
   return (
-    <form className={styles.yuiinput} onSubmit={onSubmit}>
+    <div className={styles.yuiinput}>
       {leftComponents}
       <input
+        name={name}
         type="text"
         placeholder={placeholder}
         className={_class}
-        value={inputValue}
-        onChange={(event) => onInputChangeHandler(event.target.value)}
       />
       {rightComponents}
-    </form>
+    </div>
   );
 };
 
-export default Input;
+export { Input };

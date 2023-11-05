@@ -4,18 +4,17 @@ import { Typography } from "@/components/Typography/Typography";
 
 import styles from "./MainPage.module.css";
 import { Divider } from "@/components/Divider/Divider";
-import Input from "@/components/Input/Input";
+import { Input } from "@/components/Input/Input";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState } from "react";
 
 export const MainPage = () => {
   const [text, setText] = useState("");
-  const onSubmit = (finalString: string) => {
-    alert(finalString);
-  };
-
-  const onChange = (finalString: string) => {
-    setText(finalString);
+  const onSubmit = (event) => {
+    event.preventDefault()
+    let data = new FormData(event.target)
+    data = Object.fromEntries(data.entries())
+    alert(`Login to ${data.login} : ${data.password}`)
   };
   console.log("mainpage rerender");
 
@@ -39,20 +38,21 @@ export const MainPage = () => {
 
       <Divider />
       <Typography variant="header">Input components</Typography>
-      <Group>
-        <Input
-          placeholder="Search hentai..."
-          rightComponents={
-            <IconArrowNarrowRight
-            // onClick={() => alert("Searching hentai...")}
-            />
-          }
-          onSubmitCallback={onSubmit}
-          onChangeCallback={onChange}
-        />
-        {text}
+      <Group variant="vertical">
+        <form onSubmit={onSubmit}>
+          <Typography>Login</Typography>
+          <Input
+            name="login"
+            placeholder="Login"
+          />
+          <Typography>Password</Typography>
+          <Input
+            name="password"
+            placeholder="Password"
+          />
+          <Button type="submit">Login</Button>
+        </form>
       </Group>
-
       <Group variant="vertical"></Group>
     </div>
   );
